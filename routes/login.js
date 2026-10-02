@@ -1,21 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const db = require('../db');
 const bcrypt = require('bcrypt');
 const generator = require('generate-password');
 const nodemailer = require('nodemailer');
 
 router.get('/', function(req, res, next) {
-  res.render('login');
+  res.render('Main/login');
 });
 router.get('/zaboravljena-lozinka', function(req,res,next){
-  res.render('zaboravljena-lozinka');
+  res.render('Main/zaboravljena-lozinka');
 });
 router.post('/', async function(req,res,next){
-    db.get('SELECT * FROM korisnici WHERE username=?;', [req.body.username], async (err,data)=>{
+    db.get('SELECT * FROM korisnici WHERE username=?;', [req.body.username], async (err,data)=>{ 
       if(err){
-        console.log(err);
-        res.render('login', {poruka: "Greška sa bazom", greska: true});
+        res.render('Main/login', {poruka: "Greška sa bazom", greska: true});
         return;
       }
       if(data){
@@ -29,12 +28,12 @@ router.post('/', async function(req,res,next){
           req.session.korisnikId = data.id;
           res.redirect('/home');
         }else{
-        res.render('login', {poruka: "Pogrešna šifra", greska: true});
+        res.render('Main/login', {poruka: "Pogrešna šifra", greska: true});
         }
       }else{
         db.get('SELECT * FROM agencija WHERE naziv=?;',[req.body.username], async (err,data)=>{
           if(err){
-           res.render('login', {poruka: "Greška sa bazom", greska: true});
+           res.render('Main/login', {poruka: "Greška sa bazom", greska: true});
             return;
           }
           
@@ -49,10 +48,10 @@ router.post('/', async function(req,res,next){
              req.session.agencijaId = data.id;
              res.redirect('/home-agencija');
             }else{
-            res.render('login', {poruka: "Pogrešna šifra", greska: true});
+            res.render('Main/login', {poruka: "Pogrešna šifra", greska: true});
             }
           }else{
-              res.render('login', {poruka: "Pogrešan korisnik", greska: true});
+              res.render('Main/login', {poruka: "Pogrešan korisnik", greska: true});
           }
         })
       }

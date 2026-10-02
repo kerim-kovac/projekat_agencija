@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const db = require('../db');
 const bcrypt = require('bcrypt');
 const generator = require('generate-password');
@@ -12,8 +12,7 @@ router.get('/', function(req, res, next) {
 router.post('/', async function(req,res,next){
   db.get('SELECT * FROM korisnici WHERE email=?', [req.body.email], async (err,data)=>{
     if(err){
-    console.log(err);
-    res.render('zaboravljena-lozinka', {poruka: "Greška sa bazom", greska: true});      
+    res.render('Main/zaboravljena-lozinka', {poruka: "Greška sa bazom", greska: true});      
     return;
     }
     if(data){
@@ -37,20 +36,16 @@ router.post('/', async function(req,res,next){
         };
         db.run('UPDATE korisnici SET password=? WHERE email=?', [hashed,req.body.email], (err,data)=>{
           if(err){
-              console.log(err);
-
-          res.render('zaboravljena-lozinka', {poruka: "Greška sa bazom", greska: true});      
+          res.render('Main/zaboravljena-lozinka', {poruka: "Greška sa bazom", greska: true});      
             return;
           }
           
           transporter.sendMail(mailOptions, (err, info) => {
               if(err){
-                  console.log(err);
-
-                res.render('zaboravljena-lozinka', {poruka: "Greška sa bazom", greska: true});      
+                res.render('Main/zaboravljena-lozinka', {poruka: "Greška sa bazom", greska: true});      
               return;
               } else {
-              res.render('login', {poruka: "Nova lozinka je poslana na E-mail", greska:false})
+              res.render('Main/login', {poruka: "Nova lozinka je poslana na E-mail", greska:false})
               }
               });
           

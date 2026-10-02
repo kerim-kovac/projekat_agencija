@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prijavljeni korisnici</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/Agencija/home-agencija-prijavljeni-useri.css" />
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">TERRA<span>VISTA</span></div>
+
+  <a href="/home-agencija"
+     style="border:1px solid #ddd;color:#888;border-radius:8px;padding:8px 18px;font-size:14px;text-decoration:none;">
+    <i class="bi bi-arrow-left me-1"></i>
+    Nazad
+  </a>
+</nav>
+
+<div class="page-header">
+  <h1>
+    <i class="bi bi-people me-2"></i>
+    Prijavljeni korisnici
+  </h1>
+</div>
+
+<div class="content">
+
+  <div class="table-wrap">
+
+    <table class="table">
+
+      <thead>
+        <tr>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Email</th>
+          <th>Država</th>
+          <th>Grad</th>
+          <th>Datum</th>
+          <th>Status</th>
+          <th>Akcija</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <% podaci.forEach((podatak) => { %>
+        <tr>
+
+          <td>
+            <span class="badge-agencija"><%= podatak.ime %></span>
+          </td>
+
+          <td><%= podatak.prezime %></td>
+          <td><%= podatak.email %></td>
+          <td><%= podatak.drzava %></td>
+          <td><%= podatak.grad %></td>
+
+          <td>
+            <i class="bi bi-calendar3 me-1"></i>
+            <%= podatak.datum %>
+          </td>
+
+          <% if(podatak.aktivan == 0) { %>
+            <td class="status-cekanje">Na čekanju</td>
+          <% } else if(podatak.aktivan == 1) { %>
+            <td class="status-odobreno">Odobreno</td>
+          <% } else { %>
+            <td class="status-odbijen">Odbijen</td>
+          <% } %>
+
+          <td>
+
+            <div class="action-buttons">
+
+              <% if(podatak.aktivan == 0) { %>
+
+                <form action="/home-agencija/prijavljeni-useri/odobreno" method="POST">
+                  <input type="hidden" name="id" value="<%= podatak.korisnik_id %>">
+                  <input type="hidden" name="putovanje_id" value="<%= podatak.prijava_id %>">
+
+                  <button class="btn-action" type="submit">
+                    <i class="bi bi-check-circle"></i>
+                    Odobri
+                  </button>
+                </form>
+
+                <form action="/home-agencija/prijavljeni-useri/blokirano" method="POST">
+                  <input type="hidden" name="id" value="<%= podatak.korisnik_id %>">
+                  <input type="hidden" name="putovanje_id" value="<%= podatak.prijava_id %>">
+
+                  <button class="btn-action btn-danger-soft" type="submit">
+                    <i class="bi bi-ban"></i>
+                    Blokiraj
+                  </button>
+                </form>
+
+              <% } else if(podatak.aktivan == 1) { %>
+
+                <form action="/home-agencija/prijavljeni-useri/blokirano" method="POST">
+                  <input type="hidden" name="id" value="<%= podatak.korisnik_id %>">
+                  <input type="hidden" name="putovanje_id" value="<%= podatak.prijava_id %>">
+
+                  <button class="btn-action btn-danger-soft" type="submit">
+                    <i class="bi bi-ban"></i>
+                    Blokiraj
+                  </button>
+                </form>
+
+              <% } else { %>
+
+                <form action="/home-agencija/prijavljeni-useri/odobreno" method="POST">
+                  <input type="hidden" name="id" value="<%= podatak.korisnik_id %>">
+                  <input type="hidden" name="putovanje_id" value="<%= podatak.prijava_id %>">
+
+                  <button class="btn-action" type="submit">
+                    <i class="bi bi-check-circle"></i>
+                    Odobri
+                  </button>
+                </form>
+
+              <% } %>
+
+            </div>
+
+          </td>
+
+        </tr>
+        <% }) %>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postavke Agencije</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/Agencija/home-agencija-opcije.css" />
+</head>
+
+<body>
+
+  <nav class="navbar d-flex justify-content-between align-items-center">
+    <div class="brand">TERRA<span>VISTA</span></div>
+     <a href="/home-agencija"
+     style="border:1px solid #ddd;color:#888;border-radius:8px;padding:8px 18px;font-size:14px;text-decoration:none;">
+    <i class="bi bi-arrow-left me-1"></i>
+    Nazad
+  </a>
+  </nav>
+ 
+  <div class="content">
+
+    <h1 class="title">
+      <i class="bi bi-gear me-2" style="color:#3b82f6;"></i>
+      Postavke agencije
+    </h1>
+
+    <div class="card-box">
+
+      <div class="info-row">
+        <span class="info-label">Naziv</span>
+        <span class="info-value"><%= agencija.naziv %></span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">Email</span>
+        <span class="info-value"><%= agencija.email %></span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">Datum osnivanja</span>
+        <span class="info-value"><%= agencija.datum %></span>
+      </div>
+
+    </div>
+
+    <div class="card-box">
+
+      <h5 style="font-size:12px; text-transform:uppercase; color:#888; margin-bottom:15px;">
+        <i class="bi bi-lock me-1"></i> Promjena lozinke
+      </h5>
+
+      <form action="/home-agencija/postavke/promjena-sifre" method="POST">
+
+        <div class="mb-3">
+          <label>Unesite trenutnu lozinku</label>
+          <input type="password"  name="trenutna" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>Unesite novu lozinku</label>
+          <input type="password"  name="nova" class="form-control">
+        </div>
+
+        <button type="submit">Promijeni</button>
+
+      </form>
+
+    </div>
+
+  </div>
+  <footer class="footer">
+  <div class="footer-content">
+    <p><strong>Kerim Kovač</strong> – Informacione tehnologije</p>
+    <p>Index: 488/IT-25</p>
+    <p>Predmet: Razvoj web aplikacija 1</p>
+    <p>Projekat: Agencija</p>
+  </div>
+</footer>
+
+</body>
+</html>

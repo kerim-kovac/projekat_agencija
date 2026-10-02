@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <link rel="stylesheet" href="/stylesheets/User/home.css" />
+  </head>
+  <body>
+
+    <nav>
+      <div class="brand">Terra<span>Vista</span></div>
+
+      <div class="nav-links">
+        <a href="/home/lista-putovanja" class="nav-link-item">
+          Istraži putovanja
+        </a>
+        <a href="/home/rezervacije" class="nav-link-item">
+           Rezervacije
+        </a>
+        <a href="/home/moja-putovanja" class="nav-link-item">
+          Moja putovanja
+        </a>
+        <a href="/home/postavke" class="nav-link-item">
+           Postavke
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <a href="/home/logout" class="btn-logout">
+          <i class="bi bi-box-arrow-right"></i> Odjava
+        </a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Dobrodošao, <span><%= korisnik.ime %> <%= korisnik.prezime %></span></h1>
+      <p>Šta danas istražuješ?</p>
+      <span class="role-tag"><i class="bi bi-shield-check me-1"></i><%= korisnik.role %></span>
+    </div>
+
+    <div class="map-section">
+      <div class="map-header">
+        <div>
+          <h2>Destinacije na mapi</h2>
+          <p>Kliknite na marker za više informacija</p>
+        </div>
+        <%if(putovanja.length > 0){%>
+          <select id="putovanja">
+          <% putovanja.forEach((putovanje, index) => { %>
+            <option value="<%= index %>">
+              <%= putovanje.drzava %> — <%= putovanje.grad %>
+            </option>
+          <% }) %>
+        </select>
+        <%} %>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const podaci = <%- JSON.stringify(putovanja) %>;
+      if(podaci.length > 0){
+        var map = L.map('map').setView([podaci[0].lat, podaci[0].lng], 13);
+      }else{
+        var map = L.map('map').setView([43.85617, 18.40210], 13);
+      }
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      podaci.forEach((podatak) => {
+        L.marker([podatak.lat, podatak.lng]).addTo(map).bindPopup(`${podatak.drzava}, ${podatak.grad}`);
+      });
+
+      const select = document.getElementById('putovanja');
+      select.addEventListener('change', function () {
+          const index = this.value;
+          map.setView([podaci[index].lat, podaci[index].lng], 13);
+      });
+    </script>
+  </body>
+</html>

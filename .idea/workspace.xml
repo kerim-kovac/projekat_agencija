@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4e0ee10-7e23-4e05-96ff-74ac7ce4cd99" name="Changes" comment="" />
+    <list default="true" id="f4e0ee10-7e23-4e05-96ff-74ac7ce4cd99" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baza.db" beforeDir="false" afterPath="$PROJECT_DIR$/baza.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home-agencija.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home-agencija.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/test-ruta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uradi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/uradi.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-agencija-lista-putovanja.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-agencija-lista-putovanja.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-agencija-opcije.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-agencija-opcije.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-agencija-prijavljeni-useri.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-agencija-prijavljeni-useri.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-agencija-putovanja.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-agencija-putovanja.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-agencija.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-agencija.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-korisnik-lista-putovanja.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-korisnik-lista-putovanja.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-korisnik-moja-putovanja.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-korisnik-moja-putovanja.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-korisnik-rezervacije.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-korisnik-rezervacije.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-postavke.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-postavke.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register-agencija.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register-agencija.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register-korisnik.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register-korisnik.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/test.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/zaboravljena-lozinka.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/zaboravljena-lozinka.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5,
-  "fromUser": false
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/routes/home-agencija.js" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/routes/share.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3ClYadtUaEiICtDPx76A7IBrXan" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,11 +55,14 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
     "javascript.preferred.runtime.type.id": "node",
     "last_opened_file_path": "C:/Users/DT User/Desktop/projekat_agencija",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,6 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1776961692175</updated>
       <workItem from="1776961699594" duration="198000" />
+      <workItem from="1780743596122" duration="225000" />
     </task>
     <servers />
   </component>

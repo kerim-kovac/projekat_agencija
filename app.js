@@ -12,8 +12,7 @@ const registerRouter = require('./routes/register');
 const homeRouter = require('./routes/home');
 const homeagencijaRouter = require('./routes/home-agencija');
 const zaboravljenalozinkaRouter = require('./routes/zaboravljena-lozinka');
-const testiranjeRouter = require('./routes/test-ruta');
-
+const shareRouter = require('./routes/share');
 
 var app = express();
 
@@ -28,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-  secret: 'tajna123',
+  secret: process.env.SESSION_KOD,
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -41,7 +40,7 @@ app.use('/register', registerRouter);
 app.use('/home', homeRouter);
 app.use('/home-agencija',homeagencijaRouter);
 app.use('/zaboravljena-lozinka', zaboravljenalozinkaRouter);
-app.use('/test', testiranjeRouter);
+app.use('/share', shareRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,7 +55,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('Main/error');
 });
 
 module.exports = app;

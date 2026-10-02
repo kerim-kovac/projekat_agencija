@@ -1,0 +1,116 @@
+   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'DM Sans', sans-serif;
+      background:#ffffff;
+      color:#1a1a1a;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:520px;
+      background:#fff;
+      border:1px solid #f0f0f0;
+      border-radius:16px;
+      padding:50px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .logo-text{
+      font-size:18px;
+      font-weight:600;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      text-align:center;
+    }
+
+    .logo-text span{
+      color:#3b82f6;
+    }
+
+    h1{
+      font-size:28px;
+      font-weight:300;
+      text-align:center;
+      margin-top:10px;
+      margin-bottom:8px;
+      letter-spacing:-1px;
+    }
+
+    .subtitle{
+      text-align:center;
+      font-size:14px;
+      color:#999;
+    }
+
+    .divider{
+      height:1px;
+      background:#f0f0f0;
+      margin:25px 0;
+    }
+
+    label{
+      font-size:12px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:#777;
+      margin-bottom:8px;
+    }
+
+    .form-control{
+      height:48px;
+      border:1px solid #e5e7eb;
+      border-radius:10px;
+      font-size:14px;
+      background:#fff;
+    }
+
+    .form-control:focus{
+      border-color:#3b82f6;
+      box-shadow:none;
+    }
+
+    .btn-submit{
+      width:100%;
+      background:#3b82f6;
+      color:#fff;
+      border:none;
+      border-radius:10px;
+      padding:12px;
+      font-size:14px;
+      font-weight:500;
+      transition:.2s;
+    }
+
+    .btn-submit:hover{
+      background:#2563eb;
+    }
+
+    .nazad-link{
+      color:#888;
+      font-size:13px;
+      text-decoration:none;
+      transition:.2s;
+    }
+
+    .nazad-link:hover{
+      color:#3b82f6;
+    }
+
+    .alert{
+      border:none;
+      border-radius:10px;
+      font-size:14px;
+    }

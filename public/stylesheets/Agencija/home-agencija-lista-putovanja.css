@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'DM Sans', sans-serif;
+  background:#ffffff;
+  color:#1a1a1a;
+}
+
+/* NAV */
+.navbar{
+  padding:0 60px;
+  height:65px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #f0f0f0;
+  position:sticky;
+  top:0;
+  background:#fff;
+}
+
+.navbar-brand{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.navbar-brand span{
+  color:#3b82f6;
+}
+
+/* HEADER */
+.page-header{
+  padding:40px 60px;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.page-header h1{
+  font-size:28px;
+  font-weight:300;
+}
+
+.page-header i{
+  color:#3b82f6;
+}
+
+/* CONTENT */
+.content{
+  padding:40px 60px;
+}
+
+/* TABLE */
+.table-wrap{
+  background:#fff;
+  border:1px solid #f0f0f0;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 25px rgba(0,0,0,0.05);
+}
+
+.table{
+  margin:0;
+  font-size:14px;
+}
+
+.table thead{
+  background:#f9fafb;
+}
+
+.table thead th{
+  font-size:12px;
+  text-transform:uppercase;
+  color:#888;
+  padding:18px;
+  border:none;
+}
+
+.table tbody td{
+  padding:18px;
+  border-color:#f0f0f0;
+  vertical-align:middle;
+}
+
+.table tbody tr:hover{
+  background:#fafaf8;
+}
+
+/* BADGE */
+.badge-agencija{
+  background:#eff6ff;
+  color:#3b82f6;
+  border:1px solid #3b82f6;
+  border-radius:20px;
+  padding:4px 12px;
+  font-size:12px;
+}
+
+/* BUTTON */
+.btn-obrisi{
+  background:transparent;
+  border:1px solid #ef4444;
+  color:#ef4444;
+  border-radius:8px;
+  padding:7px 14px;
+  font-size:13px;
+  transition:.2s;
+}
+
+.btn-obrisi:hover{
+  background:#ef4444;
+  color:#fff;
+}
+
+/* PRICE */
+.price{
+  font-weight:600;
+}
+
+.price i{
+  color:#3b82f6;
+}
+  .search-bar{
+      display:flex;
+      justify-content:center;
+      margin-bottom:25px;
+    }
+
+    .search-bar form{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      background:#f9fafb;
+      padding:10px;
+      border-radius:12px;
+      border:1px solid #eee;
+    }
+
+    .search-bar input{
+      padding:10px 14px;
+      border:1px solid #ddd;
+      border-radius:8px;
+      width:320px;
+      outline:none;
+    }
+
+    .search-bar button{
+      padding:10px 16px;
+      border:none;
+      background:#3b82f6;
+      color:#fff;
+      border-radius:8px;
+      transition:.2s;
+    }
+
+    .search-bar button:hover{
+      background:#2563eb;
+    }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .navbar, .page-header, .content{
+    padding:20px;
+  }
+}

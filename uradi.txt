@@ -1,29 +1,4 @@
---DODAJ DA AGENCIJA MOZE VIDJETI SAMO SVOJA PUTOVANJA! ->uradio
---DODAJ I AGENCIJI OPCIJU DA MOZE MIJENJATI USERNAME AGENCIJE I SIFRU uradio
---Kreni raditi i leaflet js
---korisnik se moze odjaviti sa putovanja uradio
---sortirati putovanja uradio
---sutra napravi moja_putovanja rutu gdje prikazuje putovanja koja su prosla i na kojima je user bio odobren
---znaci poruke uspjeha/change/errori da se dorade! 
---uraditi moja putovanja! -> uradjeno!
+3.6.2026
 
---kerimkovac kerimkovac -> USER
---centrotrans centrotrans -> agencija
---gras gras ->agencija
-
-/////////////////////////// bAZA:         res.render('login', {poruka: "Greška sa bazom", greska: true});
-
-
-
-
-SELECT kreiranje_putovanja.lat, kreiranje_putovanja.lng
-FROM prijava_putovanja
-JOIN korisnici ON prijava_putovanja.korisnikov_id = 10
-
----UPIT ZA BAZU ZA MOJA PUTOVANJA---
-SELECT kreiranje_putovanja.drzava, kreiranje_putovanja.agencija, kreiranje_putovanja.tip_putovanja, kreiranje_putovanja.prevoz, kreiranje_putovanja.grad, kreiranje_putovanja.datum, kreiranje_putovanja.cijena
-FROM prijava_putovanja
-JOIN korisnici ON prijava_putovanja.korisnikov_id = korisnici.id
-JOIN kreiranje_putovanja ON prijava_putovanja.putovanje_id = kreiranje_putovanja.id
-WHERE prijava_putovanja.korisnikov_id = ? AND prijava_putovanja.aktivan = 1  AND kreiranje_putovanja.datum < date('now');
+-Uradi da te pita prije nego se odjavis ili nesto
 

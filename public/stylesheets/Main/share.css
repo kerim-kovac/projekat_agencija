@@ -1,0 +1,64 @@
+   body{
+      font-family:'DM Sans',sans-serif;
+      background:#f8fafc;
+      color:#1a1a1a;
+    }
+
+    .wrap{
+      max-width:800px;
+      margin:60px auto;
+      padding:20px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid #eef2f7;
+      border-radius:16px;
+      padding:40px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .badge-top{
+      display:inline-block;
+      background:#e8f0ff;
+      color:#3b82f6;
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:12px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:34px;
+      font-weight:300;
+      margin-bottom:10px;
+    }
+
+    .info{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .row-item{
+      display:flex;
+      justify-content:space-between;
+      padding:12px 0;
+      border-bottom:1px solid #f1f5f9;
+    }
+
+    .label{
+      color:#888;
+      font-size:13px;
+    }
+
+    .value{
+      font-weight:500;
+      color:#1a1a1a;
+    }
+
+    .icon{
+      color:#3b82f6;
+      margin-right:6px;
+    }

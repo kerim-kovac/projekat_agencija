@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'DM Sans', sans-serif;
+  background:#ffffff;
+  color:#1a1a1a;
+}
+
+nav{
+  padding:0 60px;
+  height:65px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #f0f0f0;
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:100;
+}
+
+.brand{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.btn-logout{
+  font-size:14px;
+  color:#999;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  transition:.2s;
+}
+
+.btn-logout:hover{
+  color:#e74c3c;
+}
+
+.hero{
+  padding:70px 60px 50px;
+  background:linear-gradient(135deg,#f8f9ff 0%,#ffffff 100%);
+  border-bottom:1px solid #f0f0f0;
+}
+
+.hero h1{
+  font-size:42px;
+  font-weight:300;
+  margin-bottom:8px;
+  letter-spacing:-1px;
+}
+
+.hero h1 span{
+  font-weight:600;
+}
+
+.hero p{
+  font-size:15px;
+  color:#999;
+  margin-bottom:16px;
+}
+
+.role-tag{
+  display:inline-block;
+  font-size:12px;
+  color:#3b82f6;
+  background:#eff6ff;
+  padding:4px 12px;
+  border-radius:6px;
+}
+
+.kartice{
+  padding:60px 60px 40px;
+}
+
+.kartica{
+  background:#fff;
+  border:1px solid #f0f0f0;
+  border-radius:14px;
+  padding:30px;
+  text-decoration:none;
+  color:#1a1a1a;
+  display:block;
+  height:100%;
+  transition:.25s ease;
+}
+
+.kartica:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.kartica-icon{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+  background:#eff6ff;
+  color:#3b82f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  margin-bottom:18px;
+}
+.map-section{
+  padding:0 60px 60px;
+}
+.brand span{
+
+  color:#3b82f6;
+}
+
+.map-header{
+  margin-bottom:20px;
+}
+
+.map-header h2{
+  font-size:18px;
+  font-weight:500;
+  margin-bottom:4px;
+}
+
+.map-header p{
+  font-size:13px;
+  color:#999;
+}
+
+#map{
+  height:450px;
+  width:100%;
+  border-radius:12px;
+  border:1px solid #f0f0f0;
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
+}
+.kartica h3{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.kartica p{
+  font-size:14px;
+  color:#999;
+  margin:0;
+}
+
+@media (max-width:768px){
+  nav{
+    padding:0 20px;
+  }
+
+  .hero{
+    padding:50px 20px;
+  }
+
+  .kartice{
+    padding:30px 20px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+}
